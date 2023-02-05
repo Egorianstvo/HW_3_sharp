@@ -7,20 +7,11 @@ System.Console.WriteLine("____Tusk 1____");
 System.Console.Write("Enter number: ");
 
 int Numbers = int.Parse(Console.ReadLine());
-
-int I = 1;
-
-while(I  <= Numbers)
+for(int I = 1; I <= Numbers; I++ )
 {
-    Console.Write(Math.Pow(I, 3)+ " ");
-                                                      
-    I+=1;
-
-}
-System.Console.WriteLine(".");
-
-
-
+     Console.Write(Math.Pow(I, 3)+ " ");
+}                                              
+System.Console.WriteLine();
 
 
 
@@ -64,8 +55,8 @@ Console.WriteLine(numSQRT);
 23432 -> да
 */
 
-System.Console.WriteLine("____Tusk 3____");      //К сожалению смог решить задачу только как в условие, 5-ти значное число, не нашел решение
-                                                   // что бы была для любого числа задача
+System.Console.WriteLine("____Tusk 3____");      
+                                                   
 System.Console.Write("Enter number: ");                                  
 
 int Number = int.Parse(Console.ReadLine());
@@ -86,47 +77,20 @@ else
 }
 
 
-/*
-int Number = Convert.ToInt32(Console.ReadLine());
 
-int i = 10;
 
-if(Number < i)
+System.Console.WriteLine("____Tusk 3____/VAR2");      //решал уже с помощью вариант с циклом
+System.Console.Write("Enter number: ");
+int Num = int.Parse(Console.ReadLine());
+int invert = 0;
+int temp = Num;
+
+while (temp > 0)
 {
-    System.Console.WriteLine("Enter number > 10");
-}
-else if(Number > i)
-{
-    while(Number > i)
-    {
-        i*=10;
-    
-    }
-    if(Number < i)
-    {
-        i = i/10
-    }
-    Number1 = Number / i;
-    NumberLast = Number % 10;
-
-    Number2 = (Number % i) / (i / 10);
-    Number4 = 
-
-    
-
+    int intermediate = temp % 10;    
+    temp = temp / 10;
+    invert = invert * 10 + intermediate;
 }
 
-while (i <= Number1)
-{
-    i*=10;
-}
-
-if (Number1 < 11)
-{
-     System.Console.WriteLine("Erro, enter number > 10");
-}
-else
-{
-     System.Console.WriteLine((Number1 % (i / 100)) / (i / 1000));
-}
-*/
+if (Num == invert) System.Console.WriteLine("Является ПАЛИНДДРОМОМ");
+else System.Console.WriteLine("Не является ПАЛИНДРОМОМ");
